@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    scroll-behavior: smooth;
+    background: #f7f7f7;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px 50px;
+    background: #f7f7f7;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 800;
+    user-select: none;
+    pointer-events: none;
+}
+
+.navbar a {
+    font-size: 15px;
+    color: #031540;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 15px;
+    transition: .3s;
+    text-align: cente;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: cyan;
+}
+
+.container {
+    min-height: 48vw;
+    background: linear-gradient(90deg, #fff 32vw, #031540 0);
+    width: 100%;
+    padding: 45px 60px 0px;
+    position: relative;
+}
+    
+.home {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+  
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    background: #031540;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    outline: 10px solid #031540;
+    transition: .3s ;
+    margin-left: 15px;
+}
+
+.home-image:hover {
+    box-shadow: 0 0 13px 15px #fff;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 35px 15px whitesmoke;
+    } 100% {
+        box-shadow: none;
+    }
+}
+
+.home-image img {
+    position: relative;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.home-content {
+    max-width: 600px;
+    color: white;
+    text-align: right;
+    margin-top: px;
+}
+
+.home-content h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    user-select: none;
+    pointer-events: none;
+    -webkit-text-stroke: 1px #031540;
+}
+
+.home-content h3 {
+    font-size: 20px;
+    color: transparent;
+    -webkit-text-stroke: .8px #fff;
+    user-select: none;
+    pointer-events: none;
+    background-image: linear-gradient(cyan, cyan);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -700px 0;
+    animation: animatetext 6s linear infinite;
+}
+
+@keyframes animatetext {
+
+    0%,
+    95%,
+    100% {
+        background-position: -650px 0;
+    }
+
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+
+.home-content p {
+    font-size: 12px ;
+    margin-top: 10px;
+    -webkit-text-stroke: .5px #031540;
+}
+.home-sci {
+    margin: 5px 0 10px;
+}
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 17px;
+    color: cyan;
+    margin-left: 12px;
+    transition: .3s;
+}
+
+.home-sci a:hover {
+    background: cyan;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+.btn {
+    padding: 4px 10px;
+    background: cyan;
+    border-radius: 40px;
+    font-size: 12px;
+    transition: .3s;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px cyan;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.About {
+    padding: 10px 10%; /* Tambahkan padding atas/bawah agar memiliki ruang */
+    background-color: #f7f7f7; /* Warna latar belakang yang berbeda untuk bagian About */
+    width: 100vw;
+
+}
+
+.about-content h2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    color:#031540;
+}
+
+.about-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color:#031540;
+    transition: width 0.3s ease-in-out;
+}
+
+.about-content h2:hover::after {
+    width: 100%;
+}
+
+.about-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.4;
+    
+}
+
+.Education {
+    padding: 0 10%;
+    background-color: #f7f7f7;
+    width: 100vw;
+}
+
+.education-content h2 {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    color:#031540;
+}
+
+
+.education-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Sesuaikan jarak garis dari teks */
+    width: 0;
+    height: 2px; /* Ketebalan garis */
+    background-color:#031540;; /* Warna garis */
+    transition: width 0.3s ease-in-out;
+}
+
+.education-content h2:hover::after {
+    width: 100%;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start; /* Menyelaraskan h3 dan h4 di bagian atas */
+}
+
+.education-content h3 {
+    font-size: 18px;
+    margin-right: 10px;
+    
+}
+
+.education-content h4 {
+    margin-top: 7px;
+    font-size: 12px; /* Atur ukuran font jika perlu */
+    color: #5A5A5A;
+}
+
+.education-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    
+}
+
+.Experience {
+    padding: 0px 10%;
+    background-color: #f7f7f7;
+    width: 100vw;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.experience-content h2 {
+    font-size: 20px;
+    margin-top: 35px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    color:#031540;
+}
+
+.experience-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1.5px; /* Sesuaikan jarak garis dari teks */
+    width: 0;
+    height: 2px; /* Ketebalan garis */
+    background-color:#031540;
+    transition: width 0.3s ease-in-out;
+}
+
+.experience-content h2:hover::after {
+    width: 100%;
+}
+
+
+.experience-content h3 {
+    font-size: 18px;
+    margin-right: 10px; /* Jarak antara h3 dan h4 */
+}
+
+.experience-content h4 {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #5A5A5A;
+}
+
+.experience-content h5 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.experience-content p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.Skill {
+    padding: 0 10%;
+    background-color: #f7f7f7;
+    width: 100vw;
+}
+
+.skill-content h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+    color: #031540;
+}
+
+.skill-content h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Sesuaikan jarak garis dari teks */
+    width: 0;
+    height: 2px; /* Ketebalan garis */
+    background-color:#031540; /* Warna garis */
+    transition: width 0.3s ease-in-out;
+    
+}
+
+.skill-content h2:hover::after {
+    width: 100%;
+}
+
+
+.skill-content h5 {
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.Contact {
+    padding: 5px 10%;
+    background-color: #031540;
+    width: 100vw;
+}
+
+.contact-content h2 {
+    user-select: none;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.contact-item a {
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    -webkit-text-stroke: .7px #031540;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.contact-item h5 {
+    font-weight: 500;
+    font-size: 15px;
+    float: right;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.watermark i {
+    float: right;
+    margin-right: 100px;
+    margin-top: -60px;
+    transition: color .3s ease; /* Memastikan hanya warna yang diubah secara halus */
+    user-select: none;
+    color: #fff; /* Pastikan kontras warna cukup */
+}
+
+.watermark i:hover {
+    color: cyan;
+    text-shadow: 0 0 10px #fff;
+}
+
+/* CSS untuk gaya konten utama */
+#content {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* CSS untuk overlay pemberitahuan */
+#rotate-notice {
+    display: none; /* Default disembunyikan */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Tambahan untuk teks pemberitahuan */
+#rotate-notice p {
+    margin: 0;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+}
