@@ -226,7 +226,7 @@ html {
 }
 
 .about-content p {
-    font-size: 15px;
+    font-size: 7px;
     line-height: 1.4;
     
 }
@@ -279,7 +279,7 @@ html {
 }
 
 .education-content p {
-    font-size: 15px;
+    font-size: 7px;
     line-height: 1.6;
     
 }
@@ -333,11 +333,11 @@ html {
 
 .experience-content h5 {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 7px;
 }
 
 .experience-content p {
-    font-size: 15px;
+    font-size: 7px;
     margin-top: 5px;
 }
 
@@ -375,7 +375,7 @@ html {
 
 .skill-content h5 {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 7px;
     margin-bottom: 10px;
 }
 
